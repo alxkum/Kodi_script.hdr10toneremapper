@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="32000">
+        <setting id="mode" type="select" label="32001" lvalues="32010|32011|32012|32013|32014|32015|32016" default="1"/>
+        <setting label="32020" visible="eq(-1,0)"/>
+        <setting label="32021" visible="eq(-2,1)"/>
+        <setting label="32022" visible="eq(-3,2)"/>
+        <setting label="32023" visible="eq(-4,3)"/>
+        <setting label="32024" visible="eq(-5,4)"/>
+        <setting label="32025" visible="eq(-6,5)"/>
+        <setting label="32026" visible="eq(-7,6)"/>
+        <setting id="customMaxMDL" type="number" label="32030" default="1000" visible="eq(-8,3)"/>
+        <setting id="lgSlightClipping1000" type="bool" label="32031" default="false" visible="eq(-9,5)"/>
+        <setting id="customFunctionFilePath" type="file" default="/home/osmc/.kodi/userdata/custom_toneremapper.py" visible="false"/>
+    </category>
+
+    <category label="32100">
+        <setting id="notification" type="bool" label="32101" default="true"/>
+        <setting id="notificationDuration" type="number" label="32102" default="7"/>
+    </category>
+
+    <category label="32900">
+        <setting id="fallbackMaxMDL" type="number" label="32901" default="4000"/>
+        <setting id="preferMaxCLLSmaller" type="bool" label="32902" default="true"/>
+    </category>
+</settings>

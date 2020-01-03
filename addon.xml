@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.hdr10toneremapper" name="HDR10 Toneremapper (LG OLED 2017 HDR Fix)" version="0.1.0" provider-name="alxkum">
+  <requires>
+    <import addon="xbmc.python" version="2.26.0"/>
+    <import addon="skin.osmc" version="1.0"/>
+  </requires>
+  <extension point="xbmc.service" library="addon.py"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>Change what HDR10 metadata is sent to your TV</summary>
+    <description>
+Specifically, but not exclusively, made for fixing LG 2017 OLEDs' (B7, C7, E7) tone mapping:
+LG updated their firmware and broke HDR10 tone mapping under multiple conditions.
+This addon automatically overrides the HDR10 metadata sent to the TV to trick it into using a tonemapping curve that is more accurate for the content.
+Overall, this will provide an image that is less dim and avoids overbrightened highlights for most movies.
+
+Enabling Active HDR (Dynamic Contrast: Low) on your LG 2017 is not required but recommended, if you're not bothered by its delay, for movies that are missing MaxCLL or get tonemapped to a high luminance value (e.g. 2000+ cd/m2).
+
+Only works on Vero 4K/4K+ devices, tested with kernel 3.14 (and OSMC 2019.11-1).
+    </description>
+    <disclaimer></disclaimer>
+    <platform>all</platform>
+    <license>GPL-2.0</license>
+    <forum>https://discourse.osmc.tv/</forum>
+    <website>https://github.com/alxkum/Kodi_script.hdr10toneremapper</website>
+    <source>https://github.com/alxkum/Kodi_script.hdr10toneremapper</source>
+    <assets>
+        <icon>resources/icon.png</icon>
+        <fanart></fanart>
+        <banner></banner>
+        <clearlogo></clearlogo>
+        <screenshot></screenshot>
+    </assets>
+  </extension>
+  <extension point="xbmc.addon.repository" name="HDR10 Toneremapper Repository">
+      <info compressed="true">https://raw.githubusercontent.com/alxkum/Kodi_repository.hdr10toneremapper/master/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/alxkum/Kodi_repository.hdr10toneremapper/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/alxkum/Kodi_repository.hdr10toneremapper/master</datadir>
+  </extension>
+</addon>

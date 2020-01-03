@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <string id="32000">Mode</string>
+
+    <string id="32001">Mode:</string>
+    <string id="32010">Unchanged</string>
+    <string id="32011">Passthrough from MediaInfo</string>
+    <string id="32012">MaxCLL as MaxMDL</string>
+    <string id="32013">Custom MaxMDL</string>
+    <string id="32014">Custom Function</string>
+    <string id="32015">LG OLED 2017 Fix</string>
+    <string id="32016">LG OLED 2016 (Experimental)</string>
+
+    <string id="32020">Does not change the signal the device sends.</string>
+    <string id="32021">Sends the HDR10 metadata as recognized by MediaInfo.</string>
+    <string id="32022">Reads MaxCLL and sends it as the MaxMDL value. This is useful if your TV does not base its tone mapping on MaxCLL, which often causes an unnecessarily dim picture.</string>
+    <string id="32023">Overrides HDR10 metadata with a custom value.</string>
+    <string id="32024">Implement your own handling in /home/osmc/.kodi/userdata/custom_toneremapper.py</string>
+    <string id="32025">Workaround to trick LG 2017 OLEDs into using a better tone mapping curve.</string>
+    <string id="32026">Workaround to trick LG 2016 OLEDs into using a better tone mapping curve. Still experimental.</string>
+
+    <string id="32030">Custom MaxMDL (cd/m2):</string>
+    <string id="32031">For ~1000nits content: Accept slight clipping in favor of less dim picture</string>
+
+    <string id="32100">Notification</string>
+    <string id="32101">Show HDR10 metadata on playback</string>
+    <string id="32102">Duration (seconds):</string>
+
+    <string id="32900">Advanced</string>
+    <!--<string id="32901">Fallback when no HDR10 metadata present or recognized:</string>-->
+    <string id="32901">Fallback MaxMDL (cd/m2):</string>
+    <string id="32902">Prefer MaxCLL only if smaller than MaxMDL</string>
+</strings>
