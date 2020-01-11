@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.hdr10toneremapper" name="HDR10 Toneremapper (Vero 4K/4K+)" version="0.2.0" provider-name="alxkum">
+<addon id="script.hdr10toneremapper" name="HDR10 Toneremapper (Vero 4K/4K+)" version="0.2.1" provider-name="alxkum">
   <requires>
     <import addon="xbmc.python" version="2.26.0"/>
     <import addon="skin.osmc" version="1.0"/>

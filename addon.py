@@ -41,10 +41,9 @@ def videoStarted():
     modeFn = remapping.Modes.get(addon.getSettingInt("mode"))
 
     if modeFn != None:
-        if hdrData[1] > 0 or hdrData[2] > 0 or modeFn == remapping.customMaxMDL:
-            overrideHDRData = modeFn(hdrData[0], hdrData[1], hdrData[2], hdrData[3], addon)
+        overrideHDRData = modeFn(hdrData[0], hdrData[1], hdrData[2], hdrData[3], addon)
 
-        if overrideHDRData == None:
+        if overrideHDRData == None or overrideHDRData[1] == 0:
             overrideHDRData = (1, addon.getSettingInt("fallbackMaxMDL"), 0, 0)
 
         delay = addon.getSettingInt("delay")
