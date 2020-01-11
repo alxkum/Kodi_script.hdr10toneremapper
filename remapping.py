@@ -17,7 +17,7 @@ def customUserFunction(minMDL, maxMDL, maxCLL, maxFALL, addon):
     return custom_toneremapper.customFunction(minMDL, maxMDL, maxCLL, maxFALL, addon)
 
 def LG2017OLED(minMDL, maxMDL, maxCLL, maxFALL, addon):
-    Y = maxMDL
+    """Y = maxMDL
     if maxCLL > 0 and (maxCLL < Y or addon.getSettingBool("preferMaxCLLSmaller") == False):
         Y = maxCLL
 
@@ -31,18 +31,18 @@ def LG2017OLED(minMDL, maxMDL, maxCLL, maxFALL, addon):
         else:
             Y = 1200
 
-    return (minMDL, Y, Y, maxFALL)
+    return (minMDL, Y, Y, maxFALL)"""
 
-def LG2016OLED(minMDL, maxMDL, maxCLL, maxFALL, addon):
     Y = maxMDL
-    if maxCLL > 0 and (maxCLL < Y or addon.getSettingBool("preferMaxCLLSmaller") == False):
-        Y = maxCLL
+    mode = addon.getSettingInt("lg2017_prefer_700800")
+    if mode == 0:
+        Y = 700
+    elif mode == 1:
+        Y = 800
+    elif mode == 2:
+        Y = 750
 
-    #this needs to be confirmed but 501 will most likely not result in tone mapping anyway
-    if Y <= 500: #avoid unnecessary tonemapping LG 2016 OLEDs would otherwise do
-        Y = 501
-
-    return (minMDL, Y, Y, maxFALL)
+    return (minMDL, Y, 0, 0)
 
 Modes = {
     #0: unchanged,
@@ -50,6 +50,5 @@ Modes = {
     2: maxCLLAsMaxMDL,
     3: customMaxMDL,
     4: customUserFunction,
-    5: LG2017OLED,
-    6: LG2016OLED
+    5: LG2017OLED
 }

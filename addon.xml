@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.hdr10toneremapper" name="HDR10 Toneremapper (LG OLED 2017 HDR Fix)" version="0.1.0" provider-name="alxkum">
+<addon id="script.hdr10toneremapper" name="HDR10 Toneremapper (Vero 4K/4K+)" version="0.2.0" provider-name="alxkum">
   <requires>
     <import addon="xbmc.python" version="2.26.0"/>
     <import addon="skin.osmc" version="1.0"/>
@@ -9,11 +9,12 @@
     <summary>Change what HDR10 metadata is sent to your TV</summary>
     <description>
 Specifically, but not exclusively, made for fixing LG 2017 OLEDs' (B7, C7, E7) tone mapping:
-LG updated their firmware and broke HDR10 tone mapping under multiple conditions.
-This addon automatically overrides the HDR10 metadata sent to the TV to trick it into using a tonemapping curve that is more accurate for the content.
-Overall, this will provide an image that is less dim and avoids overbrightened highlights for most movies.
+LG updated their firmware and broke HDR10 tone mapping under multiple conditions (see https://www.avsforum.com/forum/139-display-calibration/2853954-lg-2017-oled-calibration-thread-settings-108.html#post59054246).
+This addon automatically overrides the HDR10 metadata sent to the TV to trick it into using a tonemapping curve that follows the actual PQ-EOTF more closely.
+Overall, this will provide an image that is less dim and avoids overbrightened highlights and black crush for most movies.
 
-Enabling Active HDR (Dynamic Contrast: Low) on your LG 2017 is not required but recommended, if you're not bothered by its delay, for movies that are missing MaxCLL or get tonemapped to a high luminance value (e.g. 2000+ cd/m2).
+Active HDR should be disabled (Dynamic Contrast: Off) on your LG 2017.
+Slight highlight clipping for movies with 2000+ nits scenes is unavoidable.
 
 Only works on Vero 4K/4K+ devices, tested with kernel 3.14 (and OSMC 2019.11-1).
     </description>

@@ -41,15 +41,16 @@ def videoStarted():
     modeFn = remapping.Modes.get(addon.getSettingInt("mode"))
 
     if modeFn != None:
-        if hdrData[1] > 0 or hdrData[2] > 0:
+        if hdrData[1] > 0 or hdrData[2] > 0 or modeFn == remapping.customMaxMDL:
             overrideHDRData = modeFn(hdrData[0], hdrData[1], hdrData[2], hdrData[3], addon)
 
         if overrideHDRData == None:
             overrideHDRData = (1, addon.getSettingInt("fallbackMaxMDL"), 0, 0)
-        elif overrideHDRData[1] == 0:
-            overrideHDRData[1] = addon.getSettingInt("fallbackMaxMDL")
 
-        #xbmc.sleep(10000) #uncomment to compare effect
+        delay = addon.getSettingInt("delay")
+        if delay > 0:
+            xbmc.sleep(delay*1000)
+
         signaloverride.enable(overrideHDRData[0], overrideHDRData[1], overrideHDRData[2], overrideHDRData[3])
 
     if addon.getSettingBool("notification"):
